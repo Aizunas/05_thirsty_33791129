@@ -5,6 +5,9 @@ const ejs = require('ejs');
 // Create the express application object
 const app = express();
 
+// Serve static files from public folder
+app.use(express.static('public'));
+
 // Set up the body parser for POST requests
 app.use(express.urlencoded({ extended: true }));
 
